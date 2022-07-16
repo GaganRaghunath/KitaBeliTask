@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.kitabelitask.ui.ordersHistory.adapter.OrderItemBindingVariable" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_thumbnail_iv"
+            loadImageUrl="@{viewModel.thumbnailUrl}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="@{viewModel.title}"
+            android:textAppearance="@style/KitaBeliText.Body2"
+            android:textColor="@color/colorBody1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_thumbnail_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="GOOD DEAL ALPUKAT MENTEGA SEDANG 500GR" />
+
+        <TextView
+            android:id="@+id/price_tv"
+            formatPrice="@{viewModel.price}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/KitaBeliText.Subtitle2"
+            android:textColor="@color/colorPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_thumbnail_iv"
+            app:layout_constraintTop_toBottomOf="@id/title_tv"
+            tools:text="Rp. 18.000" />
+
+        <TextView
+            android:id="@+id/quantity_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{@string/quantity(viewModel.quantity)}"
+            android:textAppearance="@style/KitaBeliText.Caption"
+            android:textColor="@color/colorBody2"
+            app:layout_constraintEnd_toStartOf="@id/quantity_guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/item_thumbnail_iv"
+            app:layout_constraintTop_toBottomOf="@id/price_tv"
+            tools:text="Jumlah: 19999" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/quantity_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/bottom_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="quantity_tv" />
+
+        <TextView
+            android:id="@+id/status_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rectangle"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:textAppearance="@style/KitaBeliText.Small"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/quantity_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/quantity_guideline"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="Produk sedang disiapkan"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

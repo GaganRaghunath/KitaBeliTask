@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--        AppColors       -->
+    <color name="colorPrimary">#D56E4D</color>
+    <color name="colorPrimaryVariant">#AD2701</color>
+    <color name="colorSecondary">#D56E4D</color>
+    <color name="colorSecondaryVariant">#AD2701</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorText">#202020</color>
+
+    <color name="colorActive">#D56E4D</color>
+    <color name="colorNormal">#777777</color>
+
+    <color name="colorOverLine">#A4A4A4</color>
+    <color name="colorOverLineDark">#777777</color>
+    <color name="colorBody1">#888888</color>
+    <color name="colorBody2">#888888</color>
+
+
+    <color name="colorPrice">#B75B41</color>
+    <color name="colorCompleted">#217523</color>
+    <color name="colorCancelled">#D56E4D</color>
+
+    <!--        Global Colors       -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

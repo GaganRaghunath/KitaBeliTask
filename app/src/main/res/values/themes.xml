@@ -1,0 +1,153 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KitaBeliTask" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+
+        <!-- CardView -->
+        <item name="materialCardViewStyle">@style/KitaBeli.CardView</item>
+
+        <!-- Toolbar -->
+        <item name="toolbarStyle">@style/KitaBeli.Toolbar</item>
+
+        <!-- TabLayout -->
+        <item name="tabStyle">@style/KitaBeli.TabLayout</item>
+    </style>
+
+    <style name="KitaBeli.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="materialThemeOverlay">@style/CardViewOverlay</item>
+        <item name="shapeAppearance">@style/CardViewShapeAppearance</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <style name="CardViewOverlay" parent="">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/colorText</item>
+    </style>
+
+    <style name="CardViewShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="KitaBeli.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="materialThemeOverlay">@style/ToolbarOverlay</item>
+        <item name="titleTextAppearance">@style/KitaBeliText.Subtitle1</item>
+        <item name="subtitleTextAppearance">@style/KitaBeliText.Subtitle1</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="ToolbarOverlay" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorText</item>
+        <item name="colorControlNormal">@color/colorText</item>
+    </style>
+
+    <style name="KitaBeli.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="materialThemeOverlay">@style/TabOverlay</item>
+        <item name="tabTextAppearance">@style/KitaBeliText.Button</item>
+        <item name="tabMode">auto</item>
+    </style>
+
+    <style name="TabOverlay" parent="">
+        <item name="colorPrimary">@color/colorActive</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/colorNormal</item>
+    </style>
+
+
+    <style name="KitaBeliText" parent="android:TextAppearance">
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="KitaBeliText.Headline1">
+        <item name="fontFamily">@font/opensans_light</item>
+        <item name="android:fontFamily">@font/opensans_light</item>
+        <item name="android:textSize">@dimen/_95ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Headline2">
+        <item name="fontFamily">@font/opensans_light</item>
+        <item name="android:fontFamily">@font/opensans_light</item>
+        <item name="android:textSize">@dimen/_59ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Headline3">
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">@dimen/_48ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Headline4">
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">@dimen/_34ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Headline5">
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">@dimen/_24ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Headline6">
+        <item name="fontFamily">@font/opensans_semibold</item>
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="android:textSize">@dimen/_20ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Subtitle1">
+        <item name="fontFamily">@font/opensans_medium</item>
+        <item name="android:fontFamily">@font/opensans_medium</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Subtitle2">
+        <item name="fontFamily">@font/opensans_medium</item>
+        <item name="android:fontFamily">@font/opensans_medium</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Body1">
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Body2">
+        <item name="fontFamily">@font/opensans_medium</item>
+        <item name="android:fontFamily">@font/opensans_medium</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Button">
+        <item name="fontFamily">@font/opensans_medium</item>
+        <item name="android:fontFamily">@font/opensans_medium</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Caption">
+        <item name="fontFamily">@font/opensans_medium</item>
+        <item name="android:fontFamily">@font/opensans_medium</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="KitaBeliText.Small">
+        <item name="fontFamily">@font/opensans_semibold</item>
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- regular -->
+    <font
+        app:font="@font/opensans_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+
+    <!-- light -->
+    <font
+        app:font="@font/opensans_light"
+        app:fontStyle="normal"
+        app:fontWeight="300" />
+
+    <!-- medium -->
+    <font
+        app:font="@font/opensans_medium"
+        app:fontStyle="normal"
+        app:fontWeight="500" />
+
+</font-family>

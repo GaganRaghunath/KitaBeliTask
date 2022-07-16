@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">KitaBeliTask</string>
+
+    <string name="order_history">Pesanan Saya</string>
+    <string name="confirmed">Pesanan Diproses</string>
+    <string name="dispatched">Pesanan Dikirim</string>
+    <string name="completed">Pesanan Tiba</string>
+    <string name="cancelled">Pesanan Dibatalkan</string>
+
+    <string name="order_id">Pesanan %1$s</string>
+    <string name="price">%1$s %2$s</string>
+    <string name="quantity">Jumlah: %1$s</string>
+</resources>
